@@ -13,7 +13,7 @@ import {
 export const Header = () => {
   return (
     <StyledHeader>
-      <h1>Award Books Subscription</h1>
+      <h1>Awards Book Subscription</h1>
     </StyledHeader>
   );
 };
@@ -26,12 +26,12 @@ const BodyText = () => {
       </h2>
       <h3>
         We propose a fine selection of Award winning books:{" "}
-        <StyledSpan color="pink">Nobel</StyledSpan>, <StyledSpan color="yellow">Booker</StyledSpan>,{" "}
-        <StyledSpan color="LightSalmon">Dublin Literary Award</StyledSpan>,{" "}
-        <StyledSpan color="Olive">Goncourt</StyledSpan>... chances are you will like them!
+        <StyledSpan color="#ec303b">Nobel</StyledSpan>, <StyledSpan color="#ec303b">Booker</StyledSpan>,{" "}
+        <StyledSpan color="#ec303b">Dublin Literary Award</StyledSpan>,{" "}
+        <StyledSpan color="#ec303b">Goncourt</StyledSpan>... chances are you will like them!
       </h3>
       <h3>
-        You choose the prize and we send a winning book every month to your
+        You choose the prize you want to follow and we send a book every month to your
         home.
       </h3>
       <a
