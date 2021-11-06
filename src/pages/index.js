@@ -7,7 +7,7 @@ import { StyledGrid } from "../components/content.styles";
 
 export const StyledWrapper = styled.section`
   width: 100%;
-  height: 1200px;
+  min-height: 1200px;
   @media (min-width: 1000px) {
     height: 100vh;
   }

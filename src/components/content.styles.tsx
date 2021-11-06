@@ -24,7 +24,7 @@ export const StyledGrid = styled.div`
     padding: 1rem 2rem;
   }
   @media (min-width: ${breakpoints.LARGE_MONITOR}) {
-    grid-template-rows: 0.5fr 0.5fr repeat(9, 1fr);
+    grid-template-rows: 0.5fr repeat(9, 1fr);
   }
 `;
 
@@ -71,17 +71,17 @@ export const StyledBody = styled.div`
 
 export const StyledSpan = styled.span`
   font-weight: bold;
-  border-bottom: 2px solid ${(props) => props.color};
+  border-bottom: 2px solid var(--main-color);
 `;
 
 export const StyledBodyText = styled.div`
+  width: 100%;
   height: 50%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
   padding-bottom: 1rem;
-  width: 100%;
   h2 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
@@ -106,6 +106,10 @@ export const StyledBodyText = styled.div`
     text-decoration: none;
     text-align: center;
     font-weight: bold;
+    :hover {
+      background-color: var(--main-color);
+      color: white;
+    }
   }
   @media (min-width: ${breakpoints.DESKTOP}) {
     width: 50%;
@@ -174,4 +178,24 @@ export const StyledFooter = styled.div`
   @media (min-width: ${breakpoints.LARGE_MONITOR}) {
     grid-row: 10 / 11;
   }
+`;
+
+export const StyledFooterContent = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  @media (min-width: ${breakpoints.DESKTOP}) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+`;
+
+export const StyledFooterContact = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
 `;

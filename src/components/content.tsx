@@ -8,6 +8,8 @@ import {
   StyledFooter,
   StyledHeader,
   StyledSpan,
+  StyledFooterContent,
+  StyledFooterContact,
 } from "./content.styles";
 
 export const Header = () => {
@@ -24,29 +26,33 @@ const BodyText = () => {
       <h2>Not sure what to read next?</h2>
       <h3>
         We propose a fine selection of Award winning books:{" "}
-        <StyledSpan color="#ec303b">Nobel</StyledSpan>,{" "}
-        <StyledSpan color="#ec303b">Booker</StyledSpan>,{" "}
-        <StyledSpan color="#ec303b">Dublin Literary Award</StyledSpan>,{" "}
-        <StyledSpan color="#ec303b">Goncourt</StyledSpan>... chances are you
-        will like them!
+        <StyledSpan>Nobel</StyledSpan>, <StyledSpan>Booker</StyledSpan>,{" "}
+        <StyledSpan>Dublin Literary Award</StyledSpan>,{" "}
+        <StyledSpan>Goncourt</StyledSpan>... chances are you will like them!
       </h3>
       <h3>
         You choose the prize you want to follow and we send a book every month
         to your home.
       </h3>
-      <a
-        href="https://docs.google.com/forms/d/e/1FAIpQLSdKrxaXCx9iQgaibvdTCfpqH2fV4WGymMjWFUW49m4lHALG2Q/viewform"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Coming soon to Ireland - Click here to be notified upon launch
-      </a>
+      <BodyButton />
     </StyledBodyText>
   );
 };
 
 const BodyImage = () => {
   return <StyledBodyImage></StyledBodyImage>;
+};
+
+export const BodyButton = () => {
+  return (
+    <a
+      href="https://docs.google.com/forms/d/e/1FAIpQLSdKrxaXCx9iQgaibvdTCfpqH2fV4WGymMjWFUW49m4lHALG2Q/viewform"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Coming soon to Ireland - Click here to be notified upon launch
+    </a>
+  );
 };
 
 const Body = () => {
@@ -69,10 +75,36 @@ const Copyright = () => {
 export const Footer = ({ page }) => {
   return (
     <StyledFooter>
-      <Link to={page ? "/" : "/about"}>{page ? <h3>Home</h3> : <h3>About Us</h3>}</Link>
-      <h3>Contact: awardbooksubscription@gmail.com</h3>
+      <FooterContent page={page} />
       <Copyright />
     </StyledFooter>
+  );
+};
+
+const FooterContent = ({ page }) => {
+  return (
+    <StyledFooterContent>
+      <FooterNavigation page={page} />
+      <FooterContact />
+    </StyledFooterContent>
+  );
+};
+
+const FooterNavigation = ({ page }) => {
+  return (
+    <Link to={page ? "/" : "/about"}>
+      {page ? <h3>Home</h3> : <h3>About Us</h3>}
+    </Link>
+  );
+};
+
+const FooterContact = () => {
+  return (
+    <StyledFooterContact>
+      <h3>Contact:</h3>
+      <h2>{process.env.GATSBY_CONTACT_EMAIL}</h2>
+      <h2>{process.env.GATSBY_CONTACT_ADDRESS}</h2>
+    </StyledFooterContact>
   );
 };
 
