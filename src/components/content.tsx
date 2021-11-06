@@ -4,8 +4,10 @@ import {
   StyledBody,
   StyledBodyImage,
   StyledBodyText,
+  StyledCopyright,
   StyledFooter,
   StyledHeader,
+  StyledSpan,
 } from "./content.styles";
 
 export const Header = () => {
@@ -19,11 +21,14 @@ export const Header = () => {
 const BodyText = () => {
   return (
     <StyledBodyText>
-      <h2><span>Not sure what to read next?</span></h2>
+      <h2>
+        Not sure what to read next?
+      </h2>
       <h3>
-        We propose a selection of Award winning books: <span>Nobel</span>,{" "}
-        <span>Booker</span>, <span>Dublin Literary Award</span>,{" "}
-        <span>Goncourt</span>... chances are you will like them!
+        We propose a fine selection of Award winning books:{" "}
+        <StyledSpan color="pink">Nobel</StyledSpan>, <StyledSpan color="yellow">Booker</StyledSpan>,{" "}
+        <StyledSpan color="LightSalmon">Dublin Literary Award</StyledSpan>,{" "}
+        <StyledSpan color="Olive">Goncourt</StyledSpan>... chances are you will like them!
       </h3>
       <h3>
         You choose the prize and we send a winning book every month to your
@@ -53,6 +58,14 @@ const Body = () => {
   );
 };
 
+const Copyright = () => {
+  return (
+    <StyledCopyright>
+      <h5>(c) 2021 - Award Book Subscription | Made with 💙 by peresola.com</h5>
+    </StyledCopyright>
+  );
+};
+
 const Footer = () => {
   return (
     <StyledFooter>
@@ -60,7 +73,7 @@ const Footer = () => {
         <h3>About Us</h3>
       </Link>
       <h3>Contact: awardbooksubscription@gmail.com</h3>
-      <h3>(c) 2021 - Award Book Subscription</h3>
+      <Copyright />
     </StyledFooter>
   );
 };
