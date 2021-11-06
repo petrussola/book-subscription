@@ -21,18 +21,18 @@ export const Header = () => {
 const BodyText = () => {
   return (
     <StyledBodyText>
-      <h2>
-        Not sure what to read next?
-      </h2>
+      <h2>Not sure what to read next?</h2>
       <h3>
         We propose a fine selection of Award winning books:{" "}
-        <StyledSpan color="#ec303b">Nobel</StyledSpan>, <StyledSpan color="#ec303b">Booker</StyledSpan>,{" "}
+        <StyledSpan color="#ec303b">Nobel</StyledSpan>,{" "}
+        <StyledSpan color="#ec303b">Booker</StyledSpan>,{" "}
         <StyledSpan color="#ec303b">Dublin Literary Award</StyledSpan>,{" "}
-        <StyledSpan color="#ec303b">Goncourt</StyledSpan>... chances are you will like them!
+        <StyledSpan color="#ec303b">Goncourt</StyledSpan>... chances are you
+        will like them!
       </h3>
       <h3>
-        You choose the prize you want to follow and we send a book every month to your
-        home.
+        You choose the prize you want to follow and we send a book every month
+        to your home.
       </h3>
       <a
         href="https://docs.google.com/forms/d/e/1FAIpQLSdKrxaXCx9iQgaibvdTCfpqH2fV4WGymMjWFUW49m4lHALG2Q/viewform"
@@ -66,26 +66,24 @@ const Copyright = () => {
   );
 };
 
-const Footer = () => {
+export const Footer = ({ page }) => {
   return (
     <StyledFooter>
-      <Link to="/about/">
-        <h3>About Us</h3>
-      </Link>
+      <Link to={page ? "/" : "/about"}>{page ? <h3>Home</h3> : <h3>About Us</h3>}</Link>
       <h3>Contact: awardbooksubscription@gmail.com</h3>
       <Copyright />
     </StyledFooter>
   );
 };
 
-const Content = () => {
+const HomePage = ({ page }) => {
   return (
     <>
       <Header />
       <Body />
-      <Footer />
+      <Footer page={page} />
     </>
   );
 };
 
-export default Content;
+export default HomePage;

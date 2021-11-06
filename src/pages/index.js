@@ -1,7 +1,7 @@
 import * as React from "react";
 import { GlobalStyle } from "../styles/reset";
 import styled from "styled-components";
-import Content from "../components/content";
+import HomePage from "../components/content";
 import "@fontsource/archivo";
 import { StyledGrid } from "../components/content.styles";
 
@@ -17,13 +17,14 @@ export const GridWrapper = ({ children }) => {
   return <StyledGrid>{children}</StyledGrid>;
 };
 
-const IndexPage = () => {
+const IndexPage = ({ location }) => {
+  const page = location.pathname.split("/")[1];
   return (
     <>
       <GlobalStyle />
       <StyledWrapper>
         <GridWrapper>
-          <Content />
+          <HomePage page={page} />
         </GridWrapper>
       </StyledWrapper>
     </>
