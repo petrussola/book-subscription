@@ -73,19 +73,19 @@ export const StyledSpan = styled.span`
 
 export const StyledBodyText = styled.div`
   width: 100%;
-  height: min-content;
+  height: max-content;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
   padding: 1rem 0;
   h2 {
-    font-size: 1.5rem;
+    font-size: 3rem;
     margin-bottom: 1rem;
-    color: white;
-    background-color: var(--main-color);
     width: 100%;
-    text-align: center;
+    font-family: "Archivo Black";
+    line-height: 1;
+    color: var(--main-color)
   }
   h3 {
     font-size: 1.25rem;
@@ -103,16 +103,15 @@ export const StyledBodyText = styled.div`
     text-decoration: none;
     text-align: center;
     font-weight: bold;
-    :hover {
-      background-color: var(--main-color);
-      color: white;
-    }
   }
   @media (min-width: ${breakpoints.DESKTOP}) {
     width: 50%;
     min-height: 300px;
     padding-bottom: 0;
     justify-content: space-around;
+    a:hover {
+      background-color: rgb(236,48,59, 0.1);
+    }
   }
   @media (min-width: ${breakpoints.LARGE_MONITOR}) {
     min-height: 600px;
@@ -144,36 +143,33 @@ export const StyledBodyImage = styled.div`
   }
 `;
 
-export const StyledCopyright = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding-top: 1rem;
-  width: 100%;
-  h5 {
-    font-size: 0.75rem;
-  }
-`;
-
 export const StyledFooter = styled.div`
   border-top: 1px solid var(--separator-color);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  padding-top: 1rem;
+  padding: 0.5rem 0;
+  height: max-content;
   a {
     text-decoration: none;
-    color: var(--main-color);
+    color: var(--base-color);
   }
   h3 {
-    font-size: 1.25rem;
+    font-size: 1rem;
     padding-bottom: 0.2rem;
+  }
+  h4 {
+    font-size: 0.75rem;
+  }
+  #contact-email {
+    color: var(--main-color);
+    font-size: 0.75rem;
   }
   @media (min-width: ${breakpoints.DESKTOP}) {
     grid-column: 1 / 9;
     grid-row: 3 / 4;
+    padding-bottom: 0;
   }
   @media (min-width: ${breakpoints.LARGE_MONITOR}) {
     grid-row: 10 / 11;
@@ -198,4 +194,16 @@ export const StyledFooterContact = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+`;
+
+export const StyledCopyright = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1rem;
+  width: 100%;
+  h5 {
+    font-size: 0.75rem;
+  }
 `;

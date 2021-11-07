@@ -102,8 +102,8 @@ const FooterContact = () => {
   return (
     <StyledFooterContact>
       <h3>Contact:</h3>
-      <h2>{process.env.GATSBY_CONTACT_EMAIL}</h2>
-      <h2>{process.env.GATSBY_CONTACT_ADDRESS}</h2>
+      <a href={`mailto:${process.env.GATSBY_CONTACT_EMAIL}`} id="contact-email">{process.env.GATSBY_CONTACT_EMAIL}</a>
+      <h4>{process.env.GATSBY_CONTACT_ADDRESS}</h4>
     </StyledFooterContact>
   );
 };

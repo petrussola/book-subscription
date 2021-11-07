@@ -3,11 +3,13 @@ import { GlobalStyle } from "../styles/reset";
 import styled from "styled-components";
 import HomePage from "../components/content";
 import "@fontsource/archivo";
+import "@fontsource/archivo-black"
 import { StyledGrid, breakpoints } from "../components/content.styles";
 
 export const StyledWrapper = styled.section`
   width: 100%;
-  height: min-content;
+  height: max-content;
+  color: var(--base-color);
   @media (min-width: ${breakpoints.DESKTOP}) {
     height: 100vh;
   }

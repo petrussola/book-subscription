@@ -25,6 +25,7 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+	--base-color: #32323a;
 	--main-color: #ec303b;
 	--separator-color: #a2a8b4;
 }
@@ -35,7 +36,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1.5;
-	font-family: "Archivo"
+	font-family: "Archivo";
 }
 ol, ul {
 	list-style: none;
