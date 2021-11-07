@@ -1,59 +1,56 @@
 import styled from "styled-components";
 import Books from "../images/books.jpg";
 
-enum breakpoints {
+export enum breakpoints {
   DESKTOP = "1000px",
   LARGE_MONITOR = "1500px",
 }
 
-export const CSSVariables = styled.div`
-  --color: $;
-`;
-
 export const StyledGrid = styled.div`
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(10, 1fr);
-  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
   width: 100%;
   height: 100%;
   padding: 0 1rem;
   @media (min-width: ${breakpoints.DESKTOP}) {
+    display: grid;
     grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: 0.5fr repeat(7, 1fr);
+    grid-template-rows: 0.2fr 10fr 0.2fr;
+    gap: 10px;
     padding: 1rem 2rem;
-  }
-  @media (min-width: ${breakpoints.LARGE_MONITOR}) {
-    grid-template-rows: 0.5fr repeat(9, 1fr);
   }
 `;
 
 export const StyledHeader = styled.div`
-  grid-column: 1 / 2;
-  grid-row: 1 / 2;
+  width: 100%;
   border-bottom: 1px solid var(--separator-color);
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
   font-size: 1.5rem;
+  padding: 1rem 0;
   @media (min-width: ${breakpoints.DESKTOP}) {
     grid-column: 1/9;
+    grid-row: 1 / 2;
   }
 `;
 
 export const StyledBody = styled.div`
-  grid-column: 1 / 2;
-  grid-row: 2 / 10;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
   padding: 1rem 0;
   width: 100%;
+  height: max-content;
+  padding: 1rem 0;
   @media (min-width: ${breakpoints.DESKTOP}) {
     grid-column: 1 /9;
-    grid-row: 2 / 8;
+    grid-row: 2 / 3;
+    place-self: center;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
@@ -76,12 +73,12 @@ export const StyledSpan = styled.span`
 
 export const StyledBodyText = styled.div`
   width: 100%;
-  height: 50%;
+  height: min-content;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
-  padding-bottom: 1rem;
+  padding: 1rem 0;
   h2 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
@@ -113,10 +110,12 @@ export const StyledBodyText = styled.div`
   }
   @media (min-width: ${breakpoints.DESKTOP}) {
     width: 50%;
-    height: 75%;
+    min-height: 300px;
     padding-bottom: 0;
+    justify-content: space-around;
   }
   @media (min-width: ${breakpoints.LARGE_MONITOR}) {
+    min-height: 600px;
     h2 {
       font-size: 3.5rem;
     }
@@ -133,12 +132,15 @@ export const StyledBodyImage = styled.div`
   background: url(${Books});
   background-size: cover;
   width: 100%;
-  height: 50%;
+  height: 300px;
   border-radius: 5px;
   box-shadow: 2px 2px 0.5rem var(--separator-color);
   @media (min-width: ${breakpoints.DESKTOP}) {
     width: 50%;
-    height: 75%;
+    min-height: 300px;
+  }
+  @media (min-width: ${breakpoints.LARGE_MONITOR}) {
+    min-height: 600px;
   }
 `;
 
@@ -155,8 +157,6 @@ export const StyledCopyright = styled.div`
 `;
 
 export const StyledFooter = styled.div`
-  grid-column: 1 / 2;
-  grid-row: 10 / 11;
   border-top: 1px solid var(--separator-color);
   display: flex;
   flex-direction: column;
@@ -173,7 +173,7 @@ export const StyledFooter = styled.div`
   }
   @media (min-width: ${breakpoints.DESKTOP}) {
     grid-column: 1 / 9;
-    grid-row: 8 / 9;
+    grid-row: 3 / 4;
   }
   @media (min-width: ${breakpoints.LARGE_MONITOR}) {
     grid-row: 10 / 11;

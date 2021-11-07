@@ -7,7 +7,7 @@ import { StyledGrid, breakpoints } from "../components/content.styles";
 
 export const StyledWrapper = styled.section`
   width: 100%;
-  height: 1200px;
+  height: min-content;
   @media (min-width: ${breakpoints.DESKTOP}) {
     height: 100vh;
   }
