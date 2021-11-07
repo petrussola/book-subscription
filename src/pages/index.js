@@ -3,12 +3,12 @@ import { GlobalStyle } from "../styles/reset";
 import styled from "styled-components";
 import HomePage from "../components/content";
 import "@fontsource/archivo";
-import { StyledGrid } from "../components/content.styles";
+import { StyledGrid, breakpoints } from "../components/content.styles";
 
 export const StyledWrapper = styled.section`
   width: 100%;
-  min-height: 1200px;
-  @media (min-width: 1000px) {
+  height: 1200px;
+  @media (min-width: ${breakpoints.DESKTOP}) {
     height: 100vh;
   }
 `;
