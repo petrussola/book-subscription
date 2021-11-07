@@ -1,35 +1,15 @@
 import * as React from "react";
-import { GlobalStyle } from "../styles/reset";
-import styled from "styled-components";
-import HomePage from "../components/content";
-import "@fontsource/archivo";
-import "@fontsource/archivo-black"
-import { StyledGrid, breakpoints } from "../components/content.styles";
+import HomeBody from "../components/pages-content/home.content";
+import { usePage } from "../components/helpers/hooks";
 
-export const StyledWrapper = styled.section`
-  width: 100%;
-  height: max-content;
-  color: var(--base-color);
-  @media (min-width: ${breakpoints.DESKTOP}) {
-    height: 100vh;
-  }
-`;
-
-export const GridWrapper = ({ children }) => {
-  return <StyledGrid>{children}</StyledGrid>;
-};
+import PageWrapper from "../components/page-wrapper";
 
 const IndexPage = ({ location }) => {
-  const page = location.pathname.split("/")[1];
+  const page = usePage({ location });
   return (
-    <>
-      <GlobalStyle />
-      <StyledWrapper>
-        <GridWrapper>
-          <HomePage page={page} />
-        </GridWrapper>
-      </StyledWrapper>
-    </>
+    <PageWrapper page={page}>
+      <HomeBody />
+    </PageWrapper>
   );
 };
 
