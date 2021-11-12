@@ -1,5 +1,5 @@
 import styled from "styled-components";
-// import Books from "../images/books.jpg";
+// import Books from "../../images/bookstwo.jpg";
 import { breakpoints } from "../helpers/breakpoints";
 
 export const StyledBody = styled.div`
@@ -92,15 +92,21 @@ export const StyledBodyText = styled.div`
 `;
 
 export const StyledBodyImage = styled.div`
-  border: 1px solid red;
-  background-size: cover;
   width: 100%;
-  height: 300px;
-  border-radius: 5px;
-  box-shadow: 2px 2px 0.5rem var(--separator-color);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  img {
+    box-shadow: 2px 2px 0.5rem var(--separator-color);
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
   @media (min-width: ${breakpoints.DESKTOP}) {
     width: 50%;
-    min-height: 300px;
+    min-height: 600px;
+    margin: 0 4rem;
   }
   @media (min-width: ${breakpoints.LARGE_MONITOR}) {
     min-height: 600px;

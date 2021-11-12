@@ -7,6 +7,7 @@ import {
   StyledSpan,
 } from "./home.styles";
 import { buttonText, externalLinks } from "../helpers/button";
+import BookStore from '../../images/bookstwo.jpg'
 
 const BodyText = () => {
   const waitingListProps = {
@@ -33,11 +34,19 @@ const BodyText = () => {
   );
 };
 
+const BodyImage = () => {
+  return (
+    <StyledBodyImage>
+      <img src={BookStore} alt="book store" />
+    </StyledBodyImage>
+  )
+}
+
 const HomeBody = () => {
   return (
     <StyledBody>
       <BodyText />
-      <StyledBodyImage />
+      <BodyImage />
     </StyledBody>
   );
 };
