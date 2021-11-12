@@ -1,5 +1,4 @@
 import styled from "styled-components";
-// import Books from "../../images/bookstwo.jpg";
 import { breakpoints } from "../helpers/breakpoints";
 
 export const StyledBody = styled.div`
@@ -9,8 +8,9 @@ export const StyledBody = styled.div`
   justify-content: flex-start;
   padding: 1rem 0;
   width: 100%;
-  height: max-content;
-  padding: 1rem 0;
+  /* height: max-content; */
+  padding: 1rem 0 2rem 0;
+  /* border: 1px solid red; */
   @media (min-width: ${breakpoints.DESKTOP}) {
     grid-column: 1 /9;
     grid-row: 2 / 3;
@@ -32,41 +32,41 @@ export const StyledBody = styled.div`
 
 export const StyledSpan = styled.span`
   font-weight: bold;
-  border-bottom: 2px solid var(--main-color);
+  /* border-bottom: 2px solid var(--main-color); */
 `;
 
 export const StyledBodyText = styled.div`
   width: 100%;
-  height: max-content;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
-  padding: 1rem 0;
+  padding: 1rem 0 2rem 0;
+  > * {
+    /* border: 1px solid blue; */
+    padding-bottom: 2rem;
+  }
   h2 {
     font-size: 3rem;
-    margin-bottom: 1rem;
     width: 100%;
-    font-family: "Archivo Black";
+    font-weight: bold;
     line-height: 1;
-    color: var(--main-color);
+    color: var(--base-color);
   }
   h3 {
     font-size: 1.25rem;
-    padding-bottom: 1rem;
   }
   a {
     width: 100%;
     padding: 1rem 0.5rem;
-    border-radius: 5px;
-    border: 3px solid var(--main-color);
+    border-radius: 2rem;
+    /* border: 3px solid var(--main-color); */
     outline: none;
-    background-color: white;
+    background-color: black;
     font-size: 1.25rem;
-    color: var(--main-color);
+    color: white;
     text-decoration: none;
     text-align: center;
-    font-weight: bold;
   }
   @media (min-width: ${breakpoints.DESKTOP}) {
     width: 50%;
@@ -97,6 +97,7 @@ export const StyledBodyImage = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  /* border: 1px solid blue; */
   img {
     box-shadow: 2px 2px 0.5rem var(--separator-color);
     width: 100%;

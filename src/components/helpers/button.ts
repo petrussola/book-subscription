@@ -3,5 +3,5 @@ export enum externalLinks {
 }
 
 export enum buttonText {
-  WAITING_LIST = "Coming soon to Ireland - Click here to be notified upon launch",
+  WAITING_LIST = "Register to be notified upon launch",
 }

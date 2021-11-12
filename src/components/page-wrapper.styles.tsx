@@ -5,6 +5,7 @@ export const StyledWrapper = styled.section`
   width: 100%;
   height: max-content;
   color: var(--base-color);
+  background-color: var(--background-color);
   @media (min-width: ${breakpoints.DESKTOP}) {
     height: 100vh;
   }

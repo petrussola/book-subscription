@@ -28,6 +28,7 @@ time, mark, audio, video {
 	--base-color: #32323a;
 	--main-color: #ec303b;
 	--separator-color: #a2a8b4;
+	--background-color: #ffffff;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -36,7 +37,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1.5;
-	font-family: "Archivo";
+	font-family: "Roboto";
 }
 ol, ul {
 	list-style: none;
