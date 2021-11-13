@@ -8,9 +8,7 @@ export const StyledBody = styled.div`
   justify-content: flex-start;
   padding: 1rem 0;
   width: 100%;
-  /* height: max-content; */
   padding: 1rem 0 2rem 0;
-  /* border: 1px solid red; */
   @media (min-width: ${breakpoints.DESKTOP}) {
     grid-column: 1 /9;
     grid-row: 2 / 3;
@@ -24,15 +22,11 @@ export const StyledBody = styled.div`
   }
   @media (min-width: ${breakpoints.LARGE_MONITOR}) {
     grid-row: 2 / 10;
-    > div {
-      height: 50%;
-    }
   }
 `;
 
 export const StyledSpan = styled.span`
   font-weight: bold;
-  /* border-bottom: 2px solid var(--main-color); */
 `;
 
 export const StyledBodyText = styled.div`
@@ -43,7 +37,6 @@ export const StyledBodyText = styled.div`
   justify-content: space-between;
   padding: 1rem 0 2rem 0;
   > * {
-    /* border: 1px solid blue; */
     padding-bottom: 2rem;
   }
   h2 {
@@ -60,9 +53,8 @@ export const StyledBodyText = styled.div`
     width: 100%;
     padding: 1rem 0.5rem;
     border-radius: 2rem;
-    /* border: 3px solid var(--main-color); */
     outline: none;
-    background-color: black;
+    background-color: #000000;
     font-size: 1.25rem;
     color: white;
     text-decoration: none;
@@ -74,7 +66,7 @@ export const StyledBodyText = styled.div`
     padding-bottom: 0;
     justify-content: space-around;
     a:hover {
-      background-color: rgb(236, 48, 59, 0.1);
+      background-color: #222222;
     }
   }
   @media (min-width: ${breakpoints.LARGE_MONITOR}) {
@@ -97,7 +89,6 @@ export const StyledBodyImage = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  /* border: 1px solid blue; */
   img {
     box-shadow: 2px 2px 0.5rem var(--separator-color);
     width: 100%;
@@ -106,10 +97,18 @@ export const StyledBodyImage = styled.div`
   }
   @media (min-width: ${breakpoints.DESKTOP}) {
     width: 50%;
-    min-height: 600px;
-    margin: 0 4rem;
+    height: 500px;
+    img {
+      height: 90%;
+      width: auto;
+    }
   }
   @media (min-width: ${breakpoints.LARGE_MONITOR}) {
-    min-height: 600px;
+    width: 50%;
+    height: 900px;
+    img {
+      height: 90%;
+      width: auto;
+    }
   }
 `;

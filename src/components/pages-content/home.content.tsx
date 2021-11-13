@@ -24,8 +24,7 @@ const BodyText = () => {
         <StyledSpan>Goncourt</StyledSpan>... chances are you will like them!
       </h3>
       <h3>
-        You choose the prize you want to follow and we send a book every month
-        to your home.
+        You choose the prize and you get a book delivered to your home every month.
       </h3>
       <ButtonActionItem link={externalLinks.GOOGLE_FORM} {...waitingListProps}>
         {buttonText.WAITING_LIST}

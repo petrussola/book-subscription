@@ -1,4 +1,5 @@
 import * as React from "react";
+import LocationContext from "../../context/location";
 import { buttonText, externalLinks } from "../helpers/button";
 import { ButtonActionItem } from "../lib/button-action-item";
 import {
@@ -7,6 +8,8 @@ import {
   StyledBodyText,
   StyledSpan,
 } from "./home.styles";
+import BookStore from '../../images/bookstwo.jpg'
+import Books from '../../images/books.jpg'
 
 const AboutText = () => {
   const waitingListProps = {
@@ -36,10 +39,19 @@ const AboutText = () => {
   );
 };
 
+const BodyImage = () => {
+  const page = React.useContext(LocationContext)
+  return (
+    <StyledBodyImage>
+      <img src={page === "about" ? Books : BookStore} alt="book store" />
+    </StyledBodyImage>
+  )
+}
+
 const AboutBody = () => {
   return (
     <StyledBody>
-      <StyledBodyImage />
+      <BodyImage />
       <AboutText />
     </StyledBody>
   );
