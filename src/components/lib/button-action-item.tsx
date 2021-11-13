@@ -32,7 +32,7 @@ const StyledButtonActionItem = styled.a`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 1rem 0.5rem;
+  padding: 1rem 0;
   border-radius: 2rem;
   outline: none;
   background-color: #000000;
@@ -55,7 +55,7 @@ interface MainButtonProps {
 }
 
 const MainButton = ({ type, external }: MainButtonProps) => {
-  const externalLinkProps = external ?? {
+  const externalLinkProps = external && {
     target: "_blank",
     rel: "noopener noreferrer",
   };

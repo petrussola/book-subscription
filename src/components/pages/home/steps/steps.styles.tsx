@@ -2,13 +2,11 @@ import styled from "styled-components";
 
 export const StyledStepsContainer = styled.div`
   width: 100%;
-  padding: 3rem 0;
+  padding-top: 3rem;
   > * {
     padding-bottom: 1rem;
   }
 `;
-
-export const StyledSteps = styled.div``;
 
 export const StyledStep = styled.div`
   display: flex;

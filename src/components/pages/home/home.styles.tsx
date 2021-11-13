@@ -36,7 +36,7 @@ export const StyledBodyText = styled.div`
   align-items: flex-start;
   justify-content: space-between;
   padding: 1rem 0 2rem 0;
-  > * {
+  > h2, h3 {
     padding-bottom: 2rem;
   }
   h2 {

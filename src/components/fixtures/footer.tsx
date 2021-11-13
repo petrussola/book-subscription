@@ -13,9 +13,9 @@ const StyledFooter = styled.div`
   padding: 0.5rem 0;
   height: max-content;
   font-size: 1rem;
-  > * > * {
+  /* > * > * {
     padding-bottom: 0.3rem;
-  }
+  } */
   a {
     text-decoration: none;
     color: var(--base-color);
@@ -37,6 +37,9 @@ const StyledFooterContent = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  h4:first-child {
+    padding-bottom: 0.3rem;
+  }
   @media (min-width: ${breakpoints.DESKTOP}) {
     flex-direction: row;
     justify-content: space-between;
@@ -85,7 +88,7 @@ const FooterNavigation = () => {
 const FooterContact = () => {
   return (
     <StyledFooterContact>
-      <h4>Contact:</h4>
+      <h4>Contact</h4>
       <a href={`mailto:${process.env.GATSBY_CONTACT_EMAIL}`} id="contact-email">
         {process.env.GATSBY_CONTACT_EMAIL}
       </a>
@@ -97,7 +100,7 @@ const FooterContact = () => {
 const Copyright = () => {
   return (
     <StyledCopyright>
-      <h5>(c) 2021 - Award Book Subscription | Made with 💙 by peresola.com</h5>
+      <h6>(c) 2021 - Award Book Subscription | Made with 💙 by peresola.com</h6>
     </StyledCopyright>
   );
 };

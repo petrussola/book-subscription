@@ -1,5 +1,5 @@
 import * as React from "react";
-import { StyledStep, StyledSteps, StyledStepsContainer } from "./steps.styles";
+import { StyledStep, StyledStepsContainer } from "./steps.styles";
 import { icons } from "../../../helpers/icons";
 
 const steps = [
@@ -45,11 +45,11 @@ const Steps = () => {
   return (
     <StyledStepsContainer>
       <StepsDescription />
-      <StyledSteps>
+      <div>
         {steps.map((step) => (
           <Step step={step} key={step.id} />
         ))}
-      </StyledSteps>
+      </div>
     </StyledStepsContainer>
   );
 };
