@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { breakpoints } from "../helpers/breakpoints";
+import { breakpoints } from "../../helpers/breakpoints";
 
 export const StyledBody = styled.div`
   display: flex;
@@ -40,34 +40,13 @@ export const StyledBodyText = styled.div`
     padding-bottom: 2rem;
   }
   h2 {
-    font-size: 3rem;
-    width: 100%;
-    font-weight: bold;
-    line-height: 1;
     color: var(--base-color);
-  }
-  h3 {
-    font-size: 1.25rem;
-  }
-  a {
-    width: 100%;
-    padding: 1rem 0.5rem;
-    border-radius: 2rem;
-    outline: none;
-    background-color: #000000;
-    font-size: 1.25rem;
-    color: white;
-    text-decoration: none;
-    text-align: center;
   }
   @media (min-width: ${breakpoints.DESKTOP}) {
     width: 50%;
     min-height: 300px;
     padding-bottom: 0;
     justify-content: space-around;
-    a:hover {
-      background-color: #222222;
-    }
   }
   @media (min-width: ${breakpoints.LARGE_MONITOR}) {
     min-height: 600px;
@@ -76,9 +55,6 @@ export const StyledBodyText = styled.div`
     }
     h3 {
       font-size: 2rem;
-    }
-    a {
-      font-size: 1.75rem;
     }
   }
 `;

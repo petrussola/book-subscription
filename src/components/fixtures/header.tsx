@@ -1,6 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
-import { breakpoints } from "./helpers/breakpoints";
+import { breakpoints } from "../helpers/breakpoints";
 
 const StyledHeader = styled.div`
   width: 100%;
