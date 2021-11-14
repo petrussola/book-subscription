@@ -1,6 +1,12 @@
 import * as React from "react";
-import { StyledStep, StyledStepsContainer } from "./steps.styles";
+import {
+  StyledStep,
+  StyledStepGroup,
+  StyledStepsContainer,
+  StyledStepsTitle,
+} from "./steps.styles";
 import { icons } from "../../../helpers/icons";
+import MainButton, { MainButtonTypes } from "../../../lib/button-action-item";
 
 const steps = [
   {
@@ -17,6 +23,11 @@ const steps = [
     id: 3,
     icon: icons.book,
     text: "You receive the book... happy reading!",
+  },
+  {
+    id: 4,
+    icon: icons.payment,
+    text: "Secure monthly payment. Cancel anytime.",
   },
 ];
 
@@ -37,19 +48,20 @@ const Step = ({ step }: { step: StepProps }) => {
   );
 };
 
-const StepsDescription = () => {
-  return <h2>How does it work?</h2>;
+const StepsTitle = () => {
+  return <StyledStepsTitle>How does it work?</StyledStepsTitle>;
 };
 
 const Steps = () => {
   return (
     <StyledStepsContainer>
-      <StepsDescription />
-      <div>
+      <StepsTitle />
+      <StyledStepGroup>
         {steps.map((step) => (
           <Step step={step} key={step.id} />
         ))}
-      </div>
+      </StyledStepGroup>
+      <MainButton type={MainButtonTypes.WAIT_LIST} external width={40} />
     </StyledStepsContainer>
   );
 };

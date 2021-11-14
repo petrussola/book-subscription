@@ -10,7 +10,7 @@ export const StyledBody = styled.div`
   width: 100%;
   padding: 1rem 0 2rem 0;
   @media (min-width: ${breakpoints.DESKTOP}) {
-    grid-column: 1 /9;
+    grid-column: 1 / 9;
     grid-row: 2 / 3;
     place-self: center;
     flex-direction: row;
@@ -19,9 +19,6 @@ export const StyledBody = styled.div`
     > div {
       margin: 0 1rem;
     }
-  }
-  @media (min-width: ${breakpoints.LARGE_MONITOR}) {
-    grid-row: 2 / 10;
   }
 `;
 

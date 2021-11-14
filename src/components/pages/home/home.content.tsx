@@ -6,9 +6,7 @@ import {
   StyledBodyText,
   StyledSpan,
 } from "./home.styles";
-import { buttonText, externalLinks } from "../../helpers/button";
 import BookStore from "../../../images/bookstwo.jpg";
-import Steps from "./steps/steps";
 
 const BodyText = () => {
   return (
@@ -42,8 +40,6 @@ const HomeBody = () => {
     <StyledBody>
       <BodyText />
       <BodyImage />
-      <Steps />
-      <MainButton type={MainButtonTypes.WAIT_LIST} external />
     </StyledBody>
   );
 };

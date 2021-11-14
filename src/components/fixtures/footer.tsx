@@ -13,9 +13,6 @@ const StyledFooter = styled.div`
   padding: 0.5rem 0;
   height: max-content;
   font-size: 1rem;
-  /* > * > * {
-    padding-bottom: 0.3rem;
-  } */
   a {
     text-decoration: none;
     color: var(--base-color);
@@ -23,7 +20,7 @@ const StyledFooter = styled.div`
   }
   @media (min-width: ${breakpoints.DESKTOP}) {
     grid-column: 1 / 9;
-    grid-row: 3 / 4;
+    grid-row: 4 / 5;
     padding-bottom: 0;
   }
   @media (min-width: ${breakpoints.LARGE_MONITOR}) {

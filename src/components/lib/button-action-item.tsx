@@ -19,15 +19,9 @@ const buttonOptions = {
   },
 };
 
-interface ButtonActionItemProps {
-  children: string;
-  type: MainButtonTypes;
-  external?: boolean;
-}
-
-const StyledButtonActionItem = styled.a`
+const StyledButtonActionItem = styled.a<{ width?: number }>`
   width: 100%;
-  height: 60px;
+  padding: 20px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -39,10 +33,12 @@ const StyledButtonActionItem = styled.a`
   font-size: 1.25rem;
   color: white;
   text-decoration: none;
+  text-align: center;
   @media (min-width: ${breakpoints.DESKTOP}) {
-    a:hover {
+    :hover {
       background-color: #222222;
     }
+    width: ${(props) => (props.width ? `${props.width}%` : "100%")};
   }
   @media (min-width: ${breakpoints.LARGE_MONITOR}) {
     font-size: 1.75rem;
@@ -52,9 +48,10 @@ const StyledButtonActionItem = styled.a`
 interface MainButtonProps {
   type: MainButtonTypes;
   external?: boolean;
+  width?: number;
 }
 
-const MainButton = ({ type, external }: MainButtonProps) => {
+const MainButton = ({ type, external, width }: MainButtonProps) => {
   const externalLinkProps = external && {
     target: "_blank",
     rel: "noopener noreferrer",
@@ -62,6 +59,7 @@ const MainButton = ({ type, external }: MainButtonProps) => {
   return (
     <StyledButtonActionItem
       href={buttonOptions[type].link}
+      width={width}
       {...externalLinkProps}
     >
       {buttonOptions[type].text}
