@@ -2,6 +2,7 @@ import * as React from "react";
 import { usePage } from "../components/helpers/hooks";
 import PageWrapper from "../components/page-wrapper";
 import AboutBody from "../components/pages-content/about.content";
+import SEO from "../components/seo/seo";
 
 const AboutPage = ({ location }) => {
   const page = usePage({ location });
