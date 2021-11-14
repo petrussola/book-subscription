@@ -4,7 +4,7 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
+    siteUrl: process.env.GATSBY_URL,
     title: "Award Book Subscription",
   },
   plugins: [
