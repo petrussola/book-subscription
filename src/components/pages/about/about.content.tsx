@@ -1,21 +1,16 @@
 import * as React from "react";
-import LocationContext from "../../context/location";
-import { buttonText, externalLinks } from "../helpers/button";
-import { ButtonActionItem } from "../lib/button-action-item";
+import LocationContext from "../../../context/location";
+import MainButton, { MainButtonTypes } from "../../lib/button-action-item";
 import {
   StyledBody,
   StyledBodyImage,
   StyledBodyText,
   StyledSpan,
-} from "./home.styles";
-import BookStore from '../../images/bookstwo.jpg'
-import Books from '../../images/books.jpg'
+} from "../home/home.styles";
+import BookStore from "../../../images/bookstwo.jpg";
+import Books from "../../../images/books.jpg";
 
 const AboutText = () => {
-  const waitingListProps = {
-    target: "_blank",
-    rel: "noopener noreferrer",
-  };
   return (
     <StyledBodyText>
       <h3>
@@ -32,21 +27,19 @@ const AboutText = () => {
         Setting up this book subscription is a way to bring quality literature
         to others. <StyledSpan>Hope you like my selection!</StyledSpan>
       </h3>
-      <ButtonActionItem link={externalLinks.GOOGLE_FORM} {...waitingListProps}>
-        {buttonText.WAITING_LIST}
-      </ButtonActionItem>
+      <MainButton external type={MainButtonTypes.WAIT_LIST} />
     </StyledBodyText>
   );
 };
 
 const BodyImage = () => {
-  const page = React.useContext(LocationContext)
+  const page = React.useContext(LocationContext);
   return (
     <StyledBodyImage>
       <img src={page === "about" ? Books : BookStore} alt="book store" />
     </StyledBodyImage>
-  )
-}
+  );
+};
 
 const AboutBody = () => {
   return (

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { breakpoints } from "../helpers/breakpoints";
+import { breakpoints } from "../../helpers/breakpoints";
 
 export const StyledBody = styled.div`
   display: flex;
@@ -10,7 +10,7 @@ export const StyledBody = styled.div`
   width: 100%;
   padding: 1rem 0 2rem 0;
   @media (min-width: ${breakpoints.DESKTOP}) {
-    grid-column: 1 /9;
+    grid-column: 1 / 9;
     grid-row: 2 / 3;
     place-self: center;
     flex-direction: row;
@@ -19,9 +19,6 @@ export const StyledBody = styled.div`
     > div {
       margin: 0 1rem;
     }
-  }
-  @media (min-width: ${breakpoints.LARGE_MONITOR}) {
-    grid-row: 2 / 10;
   }
 `;
 
@@ -36,38 +33,17 @@ export const StyledBodyText = styled.div`
   align-items: flex-start;
   justify-content: space-between;
   padding: 1rem 0 2rem 0;
-  > * {
+  > h2, h3 {
     padding-bottom: 2rem;
   }
   h2 {
-    font-size: 3rem;
-    width: 100%;
-    font-weight: bold;
-    line-height: 1;
     color: var(--base-color);
-  }
-  h3 {
-    font-size: 1.25rem;
-  }
-  a {
-    width: 100%;
-    padding: 1rem 0.5rem;
-    border-radius: 2rem;
-    outline: none;
-    background-color: #000000;
-    font-size: 1.25rem;
-    color: white;
-    text-decoration: none;
-    text-align: center;
   }
   @media (min-width: ${breakpoints.DESKTOP}) {
     width: 50%;
     min-height: 300px;
     padding-bottom: 0;
     justify-content: space-around;
-    a:hover {
-      background-color: #222222;
-    }
   }
   @media (min-width: ${breakpoints.LARGE_MONITOR}) {
     min-height: 600px;
@@ -76,9 +52,6 @@ export const StyledBodyText = styled.div`
     }
     h3 {
       font-size: 2rem;
-    }
-    a {
-      font-size: 1.75rem;
     }
   }
 `;

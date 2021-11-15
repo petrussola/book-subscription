@@ -60,4 +60,22 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
+h2 {
+	font-size: 3rem;
+    width: 100%;
+    font-weight: bold;
+    line-height: 1;
+}
+h3 {
+    font-size: 2rem;
+}
+h4 {
+	font-size: 1.5rem;
+}
+h5 {
+	font-size: 1rem;
+}
+h6 {
+	font-size: 0.75rem;
+}
 `;
