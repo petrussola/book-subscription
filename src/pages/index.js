@@ -8,7 +8,7 @@ const IndexPage = ({ location }) => {
   const page = usePage({ location });
   return (
     <PageWrapper page={page}>
-      <SEO pathname="/" />
+      <SEO pathname="/" title="Home" />
       <HomeBody />
     </PageWrapper>
   );

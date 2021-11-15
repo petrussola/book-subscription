@@ -25,12 +25,13 @@ function SEO({ description, lang, meta, image: metaImage, title, pathname }) {
       ? `${site.siteMetadata.siteUrl}${metaImage.src}`
       : null;
   const canonical = pathname ? `${site.siteMetadata.siteUrl}${pathname}` : null;
+  const titlePage = title ?? site.siteMetadata.title;
   return (
     <Helmet
       htmlAttributes={{
         lang,
       }}
-      title={title}
+      title={titlePage}
       titleTemplate={`%s | ${site.siteMetadata.title}`}
       link={
         canonical

@@ -8,7 +8,7 @@ const AboutPage = ({ location }) => {
   const page = usePage({ location });
   return (
     <PageWrapper page={page}>
-      <SEO pathname="/about" />
+      <SEO pathname="/about" title="About" />
       <AboutBody />
     </PageWrapper>
   );
