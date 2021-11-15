@@ -1,7 +1,9 @@
 import * as React from "react";
-import HomeBody from "../components/pages-content/home.content";
+import HomeBody from "../components/pages/home/home.content.tsx";
 import { usePage } from "../components/helpers/hooks";
-import PageWrapper from "../components/page-wrapper";
+
+import PageWrapper from "../components/wrappers/page-wrapper";
+import Steps from "../components/pages/home/steps/steps";
 import SEO from "../components/seo/seo";
 
 const IndexPage = ({ location }) => {
@@ -10,6 +12,7 @@ const IndexPage = ({ location }) => {
     <PageWrapper page={page}>
       <SEO pathname="/" title="Home" />
       <HomeBody />
+      <Steps />
     </PageWrapper>
   );
 };

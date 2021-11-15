@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { breakpoints } from "./helpers/breakpoints";
+import { breakpoints } from "../helpers/breakpoints";
 
 export const StyledWrapper = styled.section`
   width: 100%;
@@ -22,7 +22,7 @@ export const StyledGrid = styled.div`
   @media (min-width: ${breakpoints.DESKTOP}) {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: 0.2fr 10fr 0.2fr;
+    grid-template-rows: 0.2fr 10fr 10fr 0.2fr;
     gap: 10px;
     padding: 1rem 2rem;
   }

@@ -1,8 +1,8 @@
 import * as React from "react";
 import styled from "styled-components";
 import { Link } from "gatsby";
-import { breakpoints } from "./helpers/breakpoints";
-import LocationContext from "../context/location";
+import { breakpoints } from "../helpers/breakpoints";
+import LocationContext from "../../context/location";
 
 const StyledFooter = styled.div`
   border-top: 1px solid var(--separator-color);
@@ -13,16 +13,14 @@ const StyledFooter = styled.div`
   padding: 0.5rem 0;
   height: max-content;
   font-size: 1rem;
-  > * > * {
-    padding-bottom: 0.3rem;
-  }
   a {
     text-decoration: none;
     color: var(--base-color);
+    font-size: 1rem;
   }
   @media (min-width: ${breakpoints.DESKTOP}) {
     grid-column: 1 / 9;
-    grid-row: 3 / 4;
+    grid-row: 4 / 5;
     padding-bottom: 0;
   }
   @media (min-width: ${breakpoints.LARGE_MONITOR}) {
@@ -36,6 +34,9 @@ const StyledFooterContent = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  h4:first-child {
+    padding-bottom: 0.3rem;
+  }
   @media (min-width: ${breakpoints.DESKTOP}) {
     flex-direction: row;
     justify-content: space-between;
@@ -76,7 +77,7 @@ const FooterNavigation = () => {
   const page = React.useContext(LocationContext);
   return (
     <Link to={page ? "/" : "/about"}>
-      {page ? <h3>Home</h3> : <h3>About Us</h3>}
+      {page ? <h4>Home</h4> : <h4>About Us</h4>}
     </Link>
   );
 };
@@ -84,11 +85,11 @@ const FooterNavigation = () => {
 const FooterContact = () => {
   return (
     <StyledFooterContact>
-      <h3>Contact:</h3>
+      <h4>Contact</h4>
       <a href={`mailto:${process.env.GATSBY_CONTACT_EMAIL}`} id="contact-email">
         {process.env.GATSBY_CONTACT_EMAIL}
       </a>
-      <h4>{process.env.GATSBY_CONTACT_ADDRESS}</h4>
+      <h5>{process.env.GATSBY_CONTACT_ADDRESS}</h5>
     </StyledFooterContact>
   );
 };
@@ -96,7 +97,7 @@ const FooterContact = () => {
 const Copyright = () => {
   return (
     <StyledCopyright>
-      <h3>(c) 2021 - Award Book Subscription | Made with 💙 by peresola.com</h3>
+      <h6>(c) 2021 - Award Book Subscription | Made with 💙 by peresola.com</h6>
     </StyledCopyright>
   );
 };
